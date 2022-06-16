@@ -28,7 +28,7 @@ def add_emp(request):
         dpt = int(request.POST['dept'])
         rle = int(request.POST['role'])
         new_emp = Employee(first_name=f_name, last_name=l_name,
-                           salary=sal, bonus=bns, phone=ph, dept_id=dpt, role_id=rle)
+                           salary=sal, bonus=bns, phone=ph)
         new_emp.save()
         return HttpResponse('Employee added Successfully')
     elif request.method == 'GET':
